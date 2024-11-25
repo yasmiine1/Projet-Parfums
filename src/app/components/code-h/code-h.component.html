@@ -1,0 +1,44 @@
+
+<ul>
+    <img class="coupon" src="couponhf.jpg" alt="">
+    @for(ph of parfums ; track $index){
+      <li>
+            <div class="container-lg-5" >
+                <!-- Grille Bootstrap -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <!-- Boucle Angular pour les produits -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-content">
+                                <!-- Image du produit -->
+                                <div class="card-img">
+                                    <img [src]="ph.photo" [alt]="ph.nom" class="img-fluid">
+                                </div>
+                                <!-- Informations du produit -->
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ ph.nom }}</h5>
+                                    <p class="card-text">20% {{ ph.prix -20|currency}} </p>
+                                    <span 
+                                    [ngClass]="{
+                                        'badge': true,
+                                        'text-bg-success': ph.dispo,
+                                        'text-bg-danger': !ph.dispo
+                                    }">
+                                    {{ ph.dispo ? 'DISPONIBLE' : 'RUPTURE DE STOCK' }}
+                                </span>
+                                <br>
+                                    <a  class="btn btn-primary" [routerLink]="['/parfums',ph.id]">Voir Détails
+                                     
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>   
+       
+    }
+    
+</ul>    
+

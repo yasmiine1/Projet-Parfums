@@ -1,0 +1,136 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général du corps */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section Introduction */
+#intro {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#intro .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#intro h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Section À propos de nous */
+#about-us {
+    background-color: #fafafa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about-us .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#about-us h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about-us p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#about-us h3 {
+    font-size: 28px;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Style des fondatrices */
+.founders {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.founder {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.founder:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+.founder h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.founder img {
+    width: 100%; /* Image adaptée au conteneur */
+    border-radius: 50%; /* Forme circulaire */
+    margin-bottom: 15px;
+    opacity: 0; /* Invisible au départ */
+    animation: fadeIn 1.5s ease-in forwards; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Départ invisible */
+        transform: scale(0.9); /* Zoom de départ */
+    }
+    to {
+        opacity: 1; /* Totalement visible */
+        transform: scale(1); /* Taille normale */
+    }
+}
+
+/* Responsivité pour petits écrans */
+@media (max-width: 768px) {
+    #intro h1 {
+        font-size: 28px;
+    }
+
+    #about-us h2 {
+        font-size: 26px;
+    }
+
+    .founders {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .founder {
+        width: 90%;
+    }
+}

@@ -1,0 +1,77 @@
+
+
+<form [formGroup]="ajForm" (ngSubmit)="onSubmit()">
+    <div>
+    <label>Saisir le id</label>
+    <input type="text" placeholder="id" class="form-control" name="id" formControlName="id" #txt>
+</div>
+@if (isValidId()) {
+    <div class="alert alert-danger">
+        L'Id est vide !!
+    </div>
+}
+<div>
+    <label>Saisir le nom</label>
+    <input type="text" placeholder="nom" class="form-control" name="nom" formControlName="nom" #txt>
+</div>
+@if (isValidNom()) {
+    <div class="alert alert-danger">
+        Le nom est vide !!
+    </div>
+}
+<div>
+    <label>donner la source d'image</label>
+    <input type="text" placeholder="photo source" class="form-control" name="photo" formControlName="photo" #txt>
+</div>
+@if (isValidPhoto()) {
+    <div class="alert alert-danger">
+        Le champs est vide !!
+    </div>
+}
+<div>
+    <label>Saisir le prix</label>
+    <input type="text" placeholder="prix" class="form-control" name="prix" formControlName="prix" #txt>
+</div>
+@if (isValidPrix()) {
+    <div class="alert alert-danger">
+        Le prix est vide !!
+    </div>
+}
+@else if (isValidPrixM()) {
+    <div class="alert alert-warning">
+        prix superieur a 20dt
+    </div>
+}
+<div>
+    <label>Saisir la date de sortie</label>
+    <input type="text" placeholder="yyyy/mm/dd" class="form-control" name="date" formControlName="dateSortie" #txt>
+</div>
+@if (isValidDate()) {
+    <div class="alert alert-danger">
+        Le champ date est vide !!
+    </div>
+}
+@else if (isValidDateS()) {
+    <div class="alert alert-warning">
+       la date doit etre sous le format yyyy/mm/dd
+    </div>
+}
+<div>
+    <label>Saisir description</label>
+    <textarea  placeholder="description" class="form-control" name="description" formControlName="description" ></textarea>
+
+</div>
+@if (isValidDesc()) {
+    <div class="alert alert-danger">
+        Le champ est vide !!
+    </div>
+}
+
+   
+
+    <button  [disabled]="!isFormValid" class="btn btn-info" >ajouter  </button>
+
+    <button routerLink="/user/hAdmin/adH"  class="btn btn-info">retour</button>
+   
+  
+  </form>

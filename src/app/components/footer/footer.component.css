@@ -1,0 +1,46 @@
+footer {
+    background-color: #333; /* Couleur de fond du footer */
+    padding: 20px 0; /* Espacement vertical */
+    text-align: center; /* Centrer le texte */
+
+}
+.container{
+    text-align: center;
+}
+
+footer h5 {
+    font-weight: bold; /* Mettre les titres en gras */
+    margin-bottom: 10px; /* Espacement sous les titres */
+    color: white;
+}
+
+footer p {
+    margin: 5px 0; /* Espacement vertical pour les paragraphes */
+    color: white;
+}
+
+footer ul {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding */
+}
+
+footer a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #ffffff; /* Couleur des liens */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+footer .fab, footer .fas {
+    color: #ffffff; /* Couleur des icônes */
+    font-size: 20px; /* Taille des icônes */
+}
+
+footer .fab:hover, footer .fas:hover {
+    color: #ffffff; /* Couleur au survol */
+}
+i{
+    color: white;
+}

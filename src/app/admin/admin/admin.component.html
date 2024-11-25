@@ -1,0 +1,25 @@
+<form [formGroup]="adForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Saisir le login</label>
+        <input type="text" placeholder="login" class="form-control" name="login" formControlName="login" >
+    </div>
+@if(isValidLogin()){
+    <div class="alert alert-danger">
+        Le login est vide !!
+    </div>
+}
+
+    <div>
+        <label>Saisir le mot de passe</label>
+        <input type="password" placeholder="mot de passe" class="form-control" name="mdp" formControlName="mdp" >
+    </div>
+
+    @if(isValidMdp()){
+        <div class="alert alert-danger">
+            Le mot de passe est vide !!
+        </div>
+    }
+
+    <button type="submit" [disabled]="!isFormValid" class="btn btn-success">Se connecter</button>
+    <a routerLink="/changeMdp" class="btn btn-success">change password</a> 
+</form>

@@ -1,0 +1,59 @@
+<form [formGroup]="changePasswordForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="currentPassword">Mot de passe actuel</label>
+      <input
+        type="password"
+        id="currentPassword"
+        placeholder="Mot de passe actuel"
+        formControlName="currentPassword"
+        class="form-control"
+      />
+    </div>
+    @if(isValidCP()){
+      <div class="alert alert-danger">
+          Le mot de passe actuel est vide !!
+      </div>
+  }
+  
+    <div>
+      <label for="newPassword">Nouveau mot de passe</label>
+      <input
+        type="password"
+        id="newPassword"
+        placeholder="Nouveau mot de passe"
+        formControlName="newPassword"
+        class="form-control"
+      />
+    </div>
+    @if(isValidNP()){
+      <div class="alert alert-danger">
+          Le nouveau mot de passe  est vide !!
+      </div>
+  }
+  @else if(isValidNPL()){
+    <div class="alert alert-warning">
+      Le nouveau mot de passe  doit etre au minimum 6 caracteres!!
+  </div>
+  }
+  
+    <div>
+      <label for="confirmPassword">Confirmer le nouveau mot de passe</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirmer le nouveau mot de passe"
+        formControlName="confirmPassword"
+        class="form-control"
+      />
+    </div>
+    @if(isValidCNP()){
+      <div class="alert alert-danger">
+          Le champ est vide !!
+      </div>
+  }
+  
+    <button type="submit" class="btn btn-primary" [disabled]="!changePasswordForm.valid">
+      Changer le mot de passe
+    </button>
+  </form>
+  

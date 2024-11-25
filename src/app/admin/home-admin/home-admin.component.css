@@ -1,0 +1,36 @@
+img{
+    width: 100%;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px; /* Réduit le padding pour les petits écrans */
+    }
+
+    .profile-photo {
+        width: 80px; /* Réduit la largeur de l'image */
+        height: 80px; /* Réduit la hauteur de l'image */
+    }
+
+    .disconnect-btn {
+        padding: 8px 16px; /* Réduit l'espace intérieur du bouton */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 10px; /* Réduit encore le padding pour les très petits écrans */
+    }
+
+    .profile-photo {
+        width: 60px; /* Réduit encore la largeur de l'image */
+        height: 60px; /* Réduit encore la hauteur de l'image */
+    }
+
+    .disconnect-btn {
+        padding: 6px 12px; /* Réduit l'espace intérieur du bouton */
+        font-size: 14px; /* Réduit la taille de la police */
+    }
+}

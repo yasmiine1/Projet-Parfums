@@ -1,0 +1,42 @@
+.product-card {
+    position: absolute; /* Permet de placer le conteneur dans un coin */
+    bottom: 20px; /* Distance par rapport au bas du site */
+    right: 20px; /* Distance par rapport à la droite du site */
+    width:120px; /* Taille du conteneur */
+    height: auto; /* Hauteur ajustée automatiquement */
+    overflow: hidden; /* Cache tout débordement */
+    border-radius: 10px; /* Coins arrondis pour un effet esthétique */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  }
+  
+  .product-card img {
+    width: 100%; /* S'adapte à la largeur du conteneur */
+    height: auto;
+    opacity: 0; /* Invisible initialement */
+    animation: fadeIn 2s ease-in forwards; /* Animation d'apparition fluide */
+    border-radius: 10px; /* Coins arrondis de l'image */
+  }
+  
+  .product-card p {
+    position: absolute; /* Positionnement sur l'image */
+    bottom: 10px; /* Position légèrement en haut de la bordure inférieure */
+    left: 10px; /* Espacement par rapport à la gauche */
+    color: white; /* Couleur du texte */
+    font-size: 12px; /* Taille réduite pour correspondre à la taille du conteneur */
+    font-weight: bold; /* Texte en gras */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour lisibilité */
+    z-index: 10; /* Assure que le texte est au-dessus de l'image */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Invisible au départ */
+      transform: scale(1.9); /* Zoom léger */
+    }
+    to {
+      opacity: 1; /* Complètement visible */
+      transform: scale(1); /* Taille normale */
+    }
+  }
+  
+  

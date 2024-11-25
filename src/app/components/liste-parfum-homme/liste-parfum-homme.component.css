@@ -1,0 +1,45 @@
+ul {
+    margin-top: 10px;
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 20px; /* Espace entre les éléments */
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 5px; /* Supprime le padding par défaut */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+ li {
+    flex: 1 1 200px; /* Permet à chaque élément de s'ajuster avec une largeur minimale */
+    max-width: 300px; /* Limite la largeur maximale des éléments */
+}
+img{
+    width: 100%;
+    height: 300px;
+}
+/* Style pour les champs de recherche */
+input[type="text"],
+input[type="number"] {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Container des champs pour alignement */
+#searchContainer {
+    text-align: center;
+    margin: 20px 0;
+}
+

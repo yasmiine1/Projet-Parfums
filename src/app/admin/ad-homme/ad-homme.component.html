@@ -1,0 +1,100 @@
+
+<div class="search-bar">
+    
+    <input type="text" placeholder="Rechercher..." [(ngModel)]="searchTerm" (input)="onSearch()">
+
+
+@if(filteredParfums.length>0){
+    <ul>
+        @for(parfum of filteredParfums ; track $index){
+
+    <li>
+          <div class="container-lg-5" >
+              <!-- Grille Bootstrap -->
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                  <!-- Boucle Angular pour les produits -->
+                  <div class="col">
+                      <div class="card h-100">
+                          <div class="card-content">
+                              <!-- Image du produit -->
+                              <div class="card-img">
+                                  <img [src]="parfum.photo" [alt]="parfum.nom" class="img-fluid">
+                              </div>
+                              <!-- Informations du produit -->
+                              <div class="card-body">
+                                  <h5 class="card-title">{{ parfum.nom }}</h5>
+                                  <p class="card-text"> {{ parfum.prix|currency}} </p>
+                                  <span 
+                                  [ngClass]="{
+                                      'badge': true,
+                                      'text-bg-success': parfum.dispo,
+                                      'text-bg-danger': !parfum.dispo
+                                  }">
+                                  {{ parfum.dispo ? 'DISPONIBLE' : 'RUPTURE DE STOCK' }}
+                              </span>
+                              <br>
+                                  <a  class="btn btn-dark" [routerLink]="['/user/hAdmin/adH',parfum.id]">Consulter
+                                  </a> 
+                                  <br>
+                                  <a class="btn btn-dark" [routerLink]="['/user/modifier-parfumh', parfum.id]">Modifier</a>
+
+                                  <a  class="btn btn-dark" (click)="onSupprimer(parfum.id)">Supprimer
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </li>}
+    </ul>
+}
+
+</div>
+<ul>
+    @if(filteredParfums.length==0){
+    @for(ph of parfums ; track $index){
+      <li>
+            <div class="container-lg-5" >
+                <!-- Grille Bootstrap -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <!-- Boucle Angular pour les produits -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-content">
+                                <!-- Image du produit -->
+                                <div class="card-img">
+                                    <img [src]="ph.photo" [alt]="ph.nom" class="img-fluid">
+                                </div>
+                                <!-- Informations du produit -->
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ ph.nom }}</h5>
+                                    <p class="card-text"> {{ ph.prix|currency}} </p>
+                                    <span 
+                                    [ngClass]="{
+                                        'badge': true,
+                                        'text-bg-success': ph.dispo,
+                                        'text-bg-danger': !ph.dispo
+                                    }">
+                                    {{ ph.dispo ? 'DISPONIBLE' : 'RUPTURE DE STOCK' }}
+                                </span>
+                                <br>
+                                    <a  class="btn btn-dark" [routerLink]="['/hAdmin/adH',ph.id]">Consulter
+                                    </a> 
+                                    <br>
+                                    <a class="btn btn-dark" [routerLink]="['/modifier-parfumh', ph.id]">Modifier</a>
+
+                                    <a  class="btn btn-dark" (click)="onSupprimer(ph.id)">Supprimer
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>   
+       
+    }
+}  
+</ul>    
+

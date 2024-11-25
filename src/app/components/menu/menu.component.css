@@ -1,0 +1,90 @@
+/* Style du menu principal */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black; /* Couleur de fond */
+    padding: 10px 20px; /* Espacement interne */
+}
+
+/* Titre dans le nav */
+nav h1 a {
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 24px; /* Taille du texte */
+}
+
+/* Conteneur des liens */
+nav .menu {
+    display: flex; /* Alignement horizontal des liens */
+}
+
+/* Liens du menu */
+nav .menu a {
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    margin: 0 10px; /* Espacement horizontal */
+    padding: 10px 15px; /* Espacement interne */
+    font-size: 18px; /* Taille du texte */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour les effets */
+}
+
+/* Effet de survol */
+nav .menu a:hover {
+    background-color: #575757; /* Fond au survol */
+    color: #ffcc00; /* Texte au survol */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Champ de recherche */
+nav .search-bar {
+    display: flex;
+    align-items: center;
+    
+}
+
+nav .search-bar input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+nav .search-bar button {
+    padding: 8px 12px;
+    background-color: #ffcc00;
+    border: 1px solid #ffcc00;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+nav .search-bar button:hover {
+    background-color: #e6b800;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav .menu {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    nav .menu a {
+        margin: 5px 0;
+    }
+    nav .search-bar {
+        margin-top: 10px;
+        width: 100%; /* Champ étendu */
+        justify-content: center;
+    }
+    nav .search-bar input {
+        width: 70%; /* Ajuste la largeur sur mobile */
+    }
+}

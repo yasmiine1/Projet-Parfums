@@ -1,0 +1,77 @@
+.video-box {
+    display: flex;
+    height: 710px;
+    position: relative; /* Assure que les éléments positionnés absolus se réfèrent à ce conteneur */
+}
+
+img {
+    flex: 1; /* Permet à chaque vidéo de prendre une part égale de l'espace */
+    width: 750px;
+    object-fit: cover; /* Remplit l'espace tout en conservant le ratio */
+    border: none; 
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+}
+
+img:hover {
+    opacity: 1; /* Changement d'opacité lors du survol */
+}
+
+.ym {
+    position: absolute; /* Positionne le titre par rapport au conteneur */
+    top: 35%; /* Positionne verticalement au milieu */
+    left: 50%; /* Positionne horizontalement au milieu */
+    transform: translate(-50%, -50%); /* Centre parfaitement le titre */
+    height: 300px;
+    width: 300px;
+    z-index: 1; 
+}
+
+#bf {
+    position: absolute;
+    bottom: 80px; /* Espace du bas */
+    left: calc(50% - 200px); /* Ajuste la position du titre à gauche */
+    transform: translateX(-50%); /* Centre le titre */
+    z-index: 1; 
+}
+
+#bh {
+    position: absolute;
+    bottom: 80px; /* Espace du bas */
+    left: calc(50% + 200px); /* Ajuste la position du titre à droite */
+    transform: translateX(-50%); /* Centre le titre */
+    z-index: 1; 
+}
+
+/* Styles responsifs */
+@media (max-width: 1200px) {
+    .video-box {
+        flex-direction: column; /* Empile les vidéos en colonne */
+        height: auto; /* Ajuste la hauteur */
+    }
+
+    img {
+        width: 100%; /* Remplit toute la largeur du conteneur */
+    }
+
+    #bf, #bh {
+        bottom: 20px; /* Ajuste la position pour les petits écrans */
+        left: 50%; /* Centre horizontalement */
+        transform: translateX(-50%); /* Centre le titre */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-box {
+        height: auto; /* Ajuste la hauteur pour les très petits écrans */
+    }
+
+    img {
+        height: auto; /* Ajuste la hauteur de l'image */
+    }
+
+    #bf, #bh {
+        bottom: 10px; /* Ajuste la position */
+        width: 90%; /* Prend presque toute la largeur */
+    }
+}

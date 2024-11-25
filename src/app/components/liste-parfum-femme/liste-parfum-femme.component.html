@@ -1,0 +1,28 @@
+<div id="searchContainer">
+<input type="text" placeholder="Rechercher..." id="searchInput" [(ngModel)]="searchTerm" (input)="onSearch()">
+<input type="number" placeholder="min prix" id="searchInput" [(ngModel)]="minPrice" (input)="onSearchP()">
+<input type="number" placeholder="max prix" id="searchInput" [(ngModel)]="maxPrice" (input)="onSearchP()">
+</div>
+<img src="coupn.jpg" alt="">
+@if(filteredParfums.length>0){
+    <ul>
+        @for(parfum of filteredParfums ; track $index){
+      <li>
+        <app-parfum-femme [parfumF]="parfum"></app-parfum-femme>
+    </li>
+}
+</ul>}
+
+
+
+   
+@if(filteredParfums.length==0){
+    <ul>
+    @for(pf of parfums ; track $index){
+     
+        <li>
+           
+            <app-parfum-femme [parfumF]="pf"></app-parfum-femme>
+        </li>
+    }
+</ul>}

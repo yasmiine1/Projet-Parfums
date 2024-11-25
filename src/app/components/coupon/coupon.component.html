@@ -1,0 +1,11 @@
+
+<form [formGroup]="parForm" (ngSubmit)="valider()">
+  <label>Saisir le code promo</label>
+  <input type="text" placeholder="Code promo" class="form-control" name="code" formControlName="code" #txt>
+  
+  <!-- Lien visible et cliquable seulement si le formulaire est valide -->
+  <a [routerLink]="['parfums/f']" class="btn btn-secondary" [hidden]="!isFormValid">Code promo femme</a>
+  <a [routerLink]="['parfums/h']" class="btn btn-secondary" [hidden]="!isFormValid">Code promo homme</a>
+
+</form>
+

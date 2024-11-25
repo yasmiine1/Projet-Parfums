@@ -1,0 +1,78 @@
+/* Style général pour le corps */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Assure que le contenu occupe toute la hauteur de l'écran */
+}
+
+/* Conteneur pour l'image */
+.image-container {
+    text-align: center; /* Centrer l'image */
+}
+
+/* Image */
+img {
+    max-width: 250px; /* Ajustez la taille selon vos besoins */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espace entre l'image et les liens */
+}
+
+/* Liste de catégories */
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Style des éléments de la liste */
+ul li {
+    margin: 0 15px;
+}
+
+/* Liens */
+ul li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: #585858;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul li a:hover {
+    background-color: #000000;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    ul li a {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}

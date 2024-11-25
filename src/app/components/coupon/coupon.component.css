@@ -1,0 +1,65 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour le menu */
+app-menu {
+    margin-bottom: 20px; /* Espacement sous le menu */
+}
+
+/* Styles du formulaire */
+form {
+    background: white; /* Fond blanc pour le formulaire */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px; /* Espacement interne */
+    max-width: 500px; /* Largeur maximale */
+    margin: 20px auto; /* Centre le formulaire */
+}
+
+/* Style des étiquettes */
+label {
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 10px; /* Espacement sous l'étiquette */
+    display: block; /* Pour que l'étiquette prenne toute la largeur */
+}
+
+/* Style du champ de saisie */
+input[type="text"] {
+    width: 100%; /* Remplit la largeur du conteneur */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 20px; /* Espacement sous le champ */
+    border: 1px solid #ccc; /* Bordure grise claire */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+/* Styles des boutons */
+.btn {
+    display: inline-block; /* Affichage en ligne */
+    padding: 10px 20px; /* Espacement interne */
+    background-color: grey; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    text-decoration: none; /* Pas de soulignement */
+    margin-right: 10px; /* Espacement entre les boutons */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+/* Effet de survol pour les boutons */
+.btn:hover {
+    background-color: rgb(94, 93, 93); /* Couleur plus foncée au survol */
+}
+
+/* Styles responsifs */
+@media (max-width: 767px) {
+    form {
+        width: 90%; /* Ajuste la largeur sur mobiles */
+        padding: 15px; /* Moins de padding sur mobiles */
+    }
+}
+  

@@ -1,0 +1,84 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles du conteneur principal */
+.parfum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les éléments */
+    padding: 20px;
+}
+
+/* Styles de chaque élément parfum */
+.parfum-item {
+    display: flex;
+    flex-direction: row; /* Aligne l'image et la description en ligne */
+    margin: 20px; /* Espace autour de chaque élément */
+    background: white; /* Fond blanc pour chaque item */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    overflow: hidden; /* Pour arrondir les coins */
+    width: 90%; /* Ajuste la largeur à 90% pour utiliser l'espace disponible */
+    max-width: 1200px; /* Largeur maximale pour les grands écrans */
+    padding: 40px; /* Ajoute du padding pour plus d'espace à l'intérieur */
+}
+
+.parfum img {
+    max-width: 400px; /* Largeur maximale de l'image */
+    height: auto;
+}
+
+.parfum .description {
+    padding: 20px; /* Ajoute de l'espace autour du texte */
+    flex: 1; /* Permet à la description d'occuper tout l'espace restant */
+}
+
+.parfum h2 {
+    margin: 10px 0 5px;
+    text-decoration: underline;
+    font-weight: bold; /* Texte en gras */
+    font-size: 2em; /* Augmente la taille de police */
+}
+
+.parfum p {
+    margin: 0;
+    font-size: 1.5em; /* Taille de police pour la description */
+    color: #555; /* Couleur du texte */
+    width: 100%; /* Assure que le paragraphe prend toute la largeur */
+}
+p .nom{
+    color: red;
+}
+
+/* Augmenter l'espace entre le menu et le footer */
+app-menu {
+    margin-bottom: 40px; /* Augmente l'espace sous le menu */
+}
+
+app-footer {
+    margin-top: 40px; /* Augmente l'espace au-dessus du footer */
+}
+
+/* Styles responsifs */
+@media (max-width: 767px) {
+    .parfum {
+        flex-direction: column; /* Empile les éléments sur les petits écrans */
+        align-items: center; /* Centre tous les éléments */
+    }
+    
+    .parfum-item {
+        flex-direction: column; /* Empile l'image et la description */
+        align-items: center; /* Centre l'image et la description */
+        width: 90%; /* Ajuste la largeur pour les petits écrans */
+    }
+
+    .parfum img {
+        margin: 0 0 10px; /* Espacement sous l'image */
+        max-width: 100%; /* S'assure que l'image s'adapte à l'écran */
+    }
+}

@@ -1,0 +1,47 @@
+
+  
+  /* Carte de produit */
+  .card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Image du produit */
+  .card-img {
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Informations du produit */
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e60000;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  .star{
+    font-size: 25px;
+    color: #ffcc00; /* Couleur des étoiles */
+  }

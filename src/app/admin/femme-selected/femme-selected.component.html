@@ -1,0 +1,23 @@
+
+<div class="parfum">
+    @for(pf of parfumsF; track $index) {
+        @if(idParfumF === pf.id) {
+            <div class="parfum-item">
+                <img [src]="pf.photo" [alt]="pf.nom">
+                <div class="description">
+                    <h2>{{ pf.id | uppercase }}</h2>
+                    <p style="color: rgb(116, 47, 47); font-weight: bold;">{{ pf.nom | titlecase }}</p>
+                    <p><span style="color: rgb(116, 47, 47);">description:</span> {{ pf.description }}</p>
+                    <p><span style="color: rgb(116, 47, 47);">date de sortie:</span> {{ pf.dateSortie | date:'dd/MM/yyyy' }}</p>
+                    <p><span style="color: rgb(116, 47, 47);">commentaires:</span></p>
+                    @for(c of pf.comments; track $index) {
+                        <p>{{ c.nom | titlecase }}:</p>
+                        <p>{{ c.message }}</p>
+                    }
+                    <button class="btn btn-success" routerLink="/user/hAdmin/adF" >retour</button>
+                </div>
+            </div>
+        }
+    }
+   
+</div>
